@@ -61,7 +61,16 @@ void initState(){
             top: 50,
             right: 20,
             child: Row(
-              children: [],
+              children: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.music_note,
+                    color: Colors.black
+                  ),
+                )
+                
+              ],
             ),
           ),
         ],

@@ -5,15 +5,16 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Fruit Catcher Game',
       // theme: ThemeData(
       //   colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       // ),
-      home: const GameScreen(),
+      home: GameScreen(),
     );
   }
 }

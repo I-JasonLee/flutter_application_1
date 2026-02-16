@@ -101,6 +101,7 @@ void initState(){
               onPressed: () {
               counter.value++;
               },
+              child: const Text("Tambah Score"),
             ),
           ),
 

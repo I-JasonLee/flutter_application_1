@@ -53,7 +53,11 @@ void initState(){
                 builder: (comtext, score, child) {
                   return Text(
                     'Score: $score',
-                    style: const TextStyle(),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
                   );
                 },
               ),

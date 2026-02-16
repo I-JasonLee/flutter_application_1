@@ -59,6 +59,7 @@ void initState(){
           )
           Positioned(
             top: 50,
+            right: 20,
           ),
         ],
       ),

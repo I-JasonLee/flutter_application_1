@@ -39,61 +39,59 @@ void initState(){
     return Scaffold(
       body: Column(
         children: [
-          Expanded(
-            child: Stack(
-              children: [
-                Positioned(
-                  top: 50,
-                  left:20,
-                  child: Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black54,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: ValueListenableBuilder<int>(
-                      valueListenable: counter,
-                      builder: (comtext, score, child) {
-                        return Text(
-                          'Score: $score',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        );
-                      },
-                    ),
-                  )
-                ),
-            
-                Positioned(
-                  top: 50,
-                  right: 20,
-                  child: Row(
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.music_note,
-                          color: Colors.black
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.volume_up,
-                          color: Colors.black
-                        ),
-                      ),
-            
-                    ],
+          Stack(
+            children: [
+              Positioned(
+                top: 50,
+                left:20,
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Colors.black54,
+                    borderRadius: BorderRadius.circular(10),
                   ),
+                  child: ValueListenableBuilder<int>(
+                    valueListenable: counter,
+                    builder: (comtext, score, child) {
+                      return Text(
+                        'Score: $score',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      );
+                    },
+                  ),
+                )
+              ),
+          
+              Positioned(
+                top: 50,
+                right: 20,
+                child: Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.music_note,
+                        color: Colors.black
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.volume_up,
+                        color: Colors.black
+                      ),
+                    ),
+          
+                  ],
                 ),
-            
-              ],
-
-            ),
+              ),
+          
+            ],
+          
           ),
           
         ],

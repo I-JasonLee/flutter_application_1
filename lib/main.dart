@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,49 +18,46 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class GameScreen extends StatelessWidget {
-  // const MyHomePage({super.key, required this.title});
+class GameScreen extends StatefulWidget {
+  const GameScreen({super.key});
 
-  // final String title;
+  @override
+  State<GameScreen> createState() => _GameScreenState();
+}
 
-  // @override
-  // State<MyHomePage> createState() => _MyHomePageState();
-// }
+class _GameScreenState extends State<GameScreen> {
 
-// class _MyHomePageState extends State<MyHomePage> {
-//   int _counter = 0;
-
-//   void _incrementCounter() {
-//     setState(() {
-//       _counter++;
-//     });
-//   }
+@override
+void initState(){
+  super.initState();
+}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      //   title: Text(widget.title),
-      // ),
-      body: Center(
-        child: Text('Game akan ditampilkan di sini')
-        // child: Column(
-        //   mainAxisAlignment: .center,
-        //   children: [
-        //     const Text('You have pushed the button this many times:'),
-        //     Text(
-        //       '$_counter',
-        //       style: Theme.of(context).textTheme.headlineMedium,
-        //     ),
-        //   ],
-        // ),
+      body: Stack(
+        children: [
+          Positioned(
+            top: 50,
+            left:20,
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.black54,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Text(
+                'Score: 1',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
+          )
+        ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: _incrementCounter,
-      //   tooltip: 'Increment',
-      //   child: const Icon(Icons.add),
-      // ),
     );
   }
 }

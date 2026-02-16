@@ -50,7 +50,11 @@ void initState(){
               ),
               child: ValueListenableBuilder<int>(
                 valueListenable: counter,
-                builder: () {}
+                builder: (comtext, score, child) {
+                  return Text(
+                    
+                  );
+                },
               ),
             )
           ),

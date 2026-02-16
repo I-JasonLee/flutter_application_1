@@ -97,6 +97,11 @@ void initState(){
           ),
           Padding(
             padding: const EdgeInsets.all(16),
+            child: ElevatedButton(
+              onPressed: () {
+              counter.value++;
+              },
+            ),
           ),
 
         ],

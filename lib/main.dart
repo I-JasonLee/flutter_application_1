@@ -52,7 +52,7 @@ void initState(){
                 valueListenable: counter,
                 builder: (comtext, score, child) {
                   return Text(
-                    
+                    'Score: $score',
                   );
                 },
               ),

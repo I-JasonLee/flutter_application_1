@@ -56,7 +56,8 @@ void initState(){
                 ),
               ),
             )
-          )
+          ),
+          
           Positioned(
             top: 50,
             right: 20,
@@ -68,11 +69,19 @@ void initState(){
                     Icons.music_note,
                     color: Colors.black
                   ),
-                )
-                
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.volume_up,
+                    color: Colors.black
+                  ),
+                ),
+
               ],
             ),
           ),
+
         ],
       ),
     );

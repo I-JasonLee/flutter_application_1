@@ -53,7 +53,7 @@ void initState(){
                 borderRadius: BorderRadius.circular(10),
               ),
               child: ValueListenableBuilder<int>(
-                valueListenable: counter,
+                valueListenable: game.scoreNotifier,
                 builder: (comtext, score, child) {
                   return Text(
                     'Score: $score',

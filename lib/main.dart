@@ -54,7 +54,7 @@ void initState(){
               ),
               child: ValueListenableBuilder<int>(
                 valueListenable: game.scoreNotifier,
-                builder: (comtext, score, child) {
+                builder: (context, score, child) {
                   return Text(
                     'Score: $score',
                     style: const TextStyle(

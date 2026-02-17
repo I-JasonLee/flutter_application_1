@@ -35,4 +35,6 @@ class AudioManager {
       print('Error initializing audio: $e');
     }
   }
+  // Play background music
+  void playBackgroundMusic() {}
 }

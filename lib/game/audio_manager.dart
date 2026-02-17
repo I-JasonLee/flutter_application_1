@@ -60,6 +60,8 @@ class AudioManager {
     try {
       FlameAudio.bgm.pause();
     }
-    catch (e) {}
+    catch (e) {
+      print('Error pausing background music: $e');
+    }
   }
 }

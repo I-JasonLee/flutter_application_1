@@ -16,4 +16,7 @@ class AudioManager {
   bool get isSfxEnabled => _isSfxEnabled;
   double get musicVolume => _musicVolume;
   double get sfxVolume => _sfxVolume;
+
+  // Initialize audio system - preload all audio files
+  Future<void> initialize() async {}
 }

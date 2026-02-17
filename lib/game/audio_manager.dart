@@ -46,4 +46,6 @@ class AudioManager {
       }
     }
   }
+  // Stop background music
+  void stopBackgroundMusic() {}
 }

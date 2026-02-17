@@ -21,7 +21,11 @@ class AudioManager {
   Future<void> initialize() async {
     try {
       // Preload all sound effects
-      await FlameAudio.audioCache.loadAll([]);
+      await FlameAudio.audioCache.loadAll(
+        [
+          'music/background_music.mp3',
+        ]
+      );
     }
   }
 }

@@ -56,5 +56,7 @@ class AudioManager {
     }
   }
   // Pause background music
-  void pauseBackgroundMusic() {}
+  void pauseBackgroundMusic() {
+    try {}
+  }
 }

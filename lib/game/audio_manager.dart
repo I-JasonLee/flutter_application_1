@@ -31,6 +31,8 @@ class AudioManager {
       );
       print('Audio initialized successfully');
     }
-    catch (e) {}
+    catch (e) {
+      print('Error initializing audio: $e');
+    }
   }
 }

@@ -38,7 +38,9 @@ class AudioManager {
   // Play background music
   void playBackgroundMusic() {
     if (_isMusicEnabled) {
-      try {}
+      try {
+        FlameAudio.bgm.play('music/background_music.mp3', volume: _musicVolume);
+      }
     }
   }
 }

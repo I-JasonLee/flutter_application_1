@@ -41,7 +41,9 @@ class AudioManager {
       try {
         FlameAudio.bgm.play('music/background_music.mp3', volume: _musicVolume);
       }
-      catch (e) {}
+      catch (e) {
+        print('Error playing background music: $e');
+      }
     }
   }
 }

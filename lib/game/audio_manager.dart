@@ -48,6 +48,8 @@ class AudioManager {
   }
   // Stop background music
   void stopBackgroundMusic() {
-    try {}
+    try {
+      FlameAudio.bgm.stop();
+    }
   }
 }

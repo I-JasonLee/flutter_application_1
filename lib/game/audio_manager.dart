@@ -29,6 +29,7 @@ class AudioManager {
           'sfx/jump.mp3',
         ]
       );
+      print('Audio initialized successfully');
     }
   }
 }

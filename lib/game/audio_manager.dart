@@ -13,4 +13,5 @@ class AudioManager {
 
   // Getters
   bool get isMusicEnabled => _isMusicEnabled;
+  bool get isSfxEnabled => _isSfxEnabled;
 }

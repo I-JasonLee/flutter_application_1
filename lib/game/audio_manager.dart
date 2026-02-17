@@ -26,6 +26,7 @@ class AudioManager {
           'music/background_music.mp3',
           'sfx/collect.mp3',
           'sfx/explosion.mp3',
+          'sfx/jump.mp3',
         ]
       );
     }

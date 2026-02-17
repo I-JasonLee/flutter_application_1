@@ -51,6 +51,8 @@ class AudioManager {
     try {
       FlameAudio.bgm.stop();
     }
-    catch (e) {}
+    catch (e) {
+      print('Error stopping background music: $e');
+    }
   }
 }

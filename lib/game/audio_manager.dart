@@ -51,5 +51,6 @@ class AudioManager {
     try {
       FlameAudio.bgm.stop();
     }
+    catch (e) {}
   }
 }

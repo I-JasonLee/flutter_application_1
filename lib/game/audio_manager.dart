@@ -31,5 +31,6 @@ class AudioManager {
       );
       print('Audio initialized successfully');
     }
+    catch (e) {}
   }
 }

@@ -24,6 +24,7 @@ class AudioManager {
       await FlameAudio.audioCache.loadAll(
         [
           'music/background_music.mp3',
+          'sfx/collect.mp3',
         ]
       );
     }

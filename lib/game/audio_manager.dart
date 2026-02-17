@@ -37,6 +37,8 @@ class AudioManager {
   }
   // Play background music
   void playBackgroundMusic() {
-    if (_isMusicEnabled) {}
+    if (_isMusicEnabled) {
+      try {}
+    }
   }
 }

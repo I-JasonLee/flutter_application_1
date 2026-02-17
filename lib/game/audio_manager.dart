@@ -57,6 +57,8 @@ class AudioManager {
   }
   // Pause background music
   void pauseBackgroundMusic() {
-    try {}
+    try {
+      FlameAudio.bgm.pause();
+    }
   }
 }

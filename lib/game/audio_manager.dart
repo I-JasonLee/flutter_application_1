@@ -7,4 +7,5 @@ class AudioManager {
   AudioManager._instance();
 
   bool _isMusicEnabled = true;
+  bool _isSfxEnabled = true;
 }

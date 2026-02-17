@@ -55,4 +55,6 @@ class AudioManager {
       print('Error stopping background music: $e');
     }
   }
+  // Pause background music
+  void pauseBackgroundMusic() {}
 }

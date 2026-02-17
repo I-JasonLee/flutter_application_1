@@ -18,5 +18,7 @@ class AudioManager {
   double get sfxVolume => _sfxVolume;
 
   // Initialize audio system - preload all audio files
-  Future<void> initialize() async {}
+  Future<void> initialize() async {
+    try {}
+  }
 }

@@ -1,3 +1,4 @@
+import 'package:flame/effects.dart';
 import 'package:flame_audio/flame_audio.dart';
 
 class AudioManager {
@@ -71,6 +72,16 @@ class AudioManager {
         FlameAudio.bgm.resume();
       } catch (e) {
         print ('Error resuming background music: $e');
+      }
+    }
+  }
+  // Play sound Effect
+  void playSfx(String fileName) {
+    if (_isSfxEnabled) {
+      try {
+        FlameAudio.play('sfx/$fileName', volume: _sfxVolume);
+      } catch (e) {
+        print('Error playing SFX: $e');
       }
     }
   }

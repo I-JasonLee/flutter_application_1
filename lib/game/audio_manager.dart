@@ -96,5 +96,14 @@ class AudioManager {
       }
     }
   }
+  // Set music volume (0.0 - 1.0)
+  void setMusicVolume(double volume) {
+    _musicVolume = volume.clamp(0.0, 1.0);
+    try {
+      FlameAudio.bgm.audioPlayer.setVolume(_musicVolume);
+    } catch (e) {
+      print('Error setting music volume: $e');
+    }
+  }
   
 }

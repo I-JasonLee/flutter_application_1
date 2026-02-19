@@ -43,3 +43,33 @@ omponent other) {
  removeFromParent();
  }
  }
+
+  @override
+ void render(Canvas canvas) {
+ super.render(canvas);
+ final paint = Paint()..style = PaintingStyle.fill;
+ switch (type) {
+ case FruitType.apple:
+ paint.color = Colors.red;
+ break;
+ case FruitType.banana:
+ paint.color = Colors.yellow;
+ break;
+ case FruitType.orange:
+ paint.color = Colors.orange;
+ break;
+ case FruitType.strawberry:
+ paint.color = Colors.pink;
+ break;
+ }
+ canvas.drawCircle(Offset(size.x / 2, size.y / 2), size.x
+/ 2, paint);
+ // Add shine effect
+Membuat Game Fruit Catcher dengan Flutter dan Flame 28
+ final shinePaint = Paint()
+ ..color = Colors.white.withOpacity(0.3)
+ ..style = PaintingStyle.fill;
+ canvas.drawCircle(Offset(size.x / 2 - 5, size.y / 2 - 5),
+size.x / 5, shinePaint);
+ }
+}

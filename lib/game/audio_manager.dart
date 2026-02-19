@@ -118,5 +118,9 @@ void toggleMusic() {
     pauseBackgroundMusic();
   }
 }
+// Toggle sound effect on/off
+void toggleSfx() {
+  _isSfxEnabled = !_isSfxEnabled;
+}
 
 }

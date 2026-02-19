@@ -15,3 +15,10 @@ tcherGame>, CollisionCallbacks {
  : type = FruitType.values[Random().nextInt(FruitType.valu
 es.length)],
  super(size: Vector2.all(40));
+
+  @override
+ Future<void> onLoad() async {
+ await super.onLoad();
+ anchor = Anchor.center;
+ add(CircleHitbox());
+ }

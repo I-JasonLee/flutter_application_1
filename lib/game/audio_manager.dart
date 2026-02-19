@@ -136,5 +136,9 @@ void disableMusic() {
     pauseBackgroundMusic();
   }
 }
+// Enable sound effects
+void enableSfx() {
+  _isSfxEnabled = true;
+}
 
 }

@@ -35,12 +35,18 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
   late FruitCatcherGame game;
 
-@override
-void initState(){
-  super.initState();
-  game = FruitCatcherGame();
-}
+  @override
+  void initState(){
+    super.initState();
+    game = FruitCatcherGame();
+  }
 
+  @override
+  void dispose() {
+    game.onRemove();
+    super.dispose();
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

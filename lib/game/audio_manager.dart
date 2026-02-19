@@ -106,43 +106,50 @@ class AudioManager {
     }
   }
   // Set sound effect volume (0.0 - 1.0)
-void setSfxVolume(double volume) {
-  _sfxVolume = volume.clamp(0.0, 1.0);
-}
+  void setSfxVolume(double volume) {
+    _sfxVolume = volume.clamp(0.0, 1.0);
+  }
   // Toggle music on/off
-void toggleMusic() {
-  _isMusicEnabled = !_isMusicEnabled;
-  if (_isMusicEnabled) {
-    resumeBackgroundMusic();
-  } else {
-    pauseBackgroundMusic();
+  void toggleMusic() {
+    _isMusicEnabled = !_isMusicEnabled;
+    if (_isMusicEnabled) {
+      resumeBackgroundMusic();
+    } else {
+      pauseBackgroundMusic();
+    }
   }
-}
 // Toggle sound effect on/off
-void toggleSfx() {
-  _isSfxEnabled = !_isSfxEnabled;
-}
+  void toggleSfx() {
+    _isSfxEnabled = !_isSfxEnabled;
+  }
 // Enable music
-void enableMusic() {
-  if (!_isMusicEnabled) {
-    _isMusicEnabled = true;
-    resumeBackgroundMusic();
+  void enableMusic() {
+    if (!_isMusicEnabled) {
+      _isMusicEnabled = true;
+      resumeBackgroundMusic();
+    }
   }
-}
 // Disable music
-void disableMusic() {
-  if (_isMusicEnabled) {
-    _isMusicEnabled = false;
-    pauseBackgroundMusic();
+  void disableMusic() {
+    if (_isMusicEnabled) {
+      _isMusicEnabled = false;
+      pauseBackgroundMusic();
+    }
   }
-}
 // Enable sound effects
-void enableSfx() {
-  _isSfxEnabled = true;
-}
+  void enableSfx() {
+    _isSfxEnabled = true;
+  }
 // Disable soudn effects
-void disableSfx() {
-  _isSfxEnabled = false;
-}
-
+  void disableSfx() {
+    _isSfxEnabled = false;
+  }
+// Cleanup and dispose audio resources
+  void dispose() {
+    try {
+      FlameAudio.bgm.dispose();
+    } catch (e) {
+      print('Error disposing audio: $e');
+    }
+  }
 }

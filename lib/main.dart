@@ -78,18 +78,22 @@ void initState(){
             child: Row(
               children: [
                 IconButton(
-                  onPressed: () {},
                   icon: const Icon(
                     Icons.music_note,
-                    color: Colors.black
+                    color: Colors.black,
                   ),
+                  onPressed: () {
+                    AudioManager().toggleMusic();
+                    },
                 ),
                 IconButton(
-                  onPressed: () {},
                   icon: const Icon(
                     Icons.volume_up,
                     color: Colors.black
                   ),
+                  onPressed: () {
+                    AudioManager().toggleSfx();
+                  },
                 ),
       
               ],

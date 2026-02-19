@@ -34,3 +34,11 @@ class Basket extends PositionComponent
       Rect.fromLTWH(0, 0, size.x, size.y),
       const Radius.circular(10),
     );
+
+     canvas.drawRRect(rect, paint);
+
+    // Draw basket handle
+    final handlePaint = Paint()
+      ..color = Colors.brown[800]!
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3;

@@ -129,5 +129,12 @@ void enableMusic() {
     resumeBackgroundMusic();
   }
 }
+// Disable music
+void disableMusic() {
+  if (_isMusicEnabled) {
+    _isMusicEnabled = false;
+    pauseBackgroundMusic();
+  }
+}
 
 }

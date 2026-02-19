@@ -1,9 +1,10 @@
 import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flutter/material.dart';
 
 class Basket extends PositionComponent
-  with HasGameRef, CollisionCallbacks {
+  with HasGameRef, CollisionCallbacks, DragCallbacks {
 
   Basket() : super(size: Vector2(80, 60));
 
@@ -20,6 +21,21 @@ class Basket extends PositionComponent
 
     add(RectangleHitbox());
   }
+
+  @override
+  void onDragUpdate(DragUpdateEvent event) {
+  position.x += event.localDelta.x;
+
+  // Batasi agar tidak keluar layar kiri
+  if (position.x < size.x / 2) {
+    position.x = size.x / 2;
+  }
+
+  // Batasi agar tidak keluar layar kanan
+  if (position.x > gameRef.size.x - size.x / 2) {
+    position.x = gameRef.size.x - size.x / 2;
+  }
+}
 
   @override
   void render(Canvas canvas) {

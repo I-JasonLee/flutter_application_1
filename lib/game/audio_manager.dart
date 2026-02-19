@@ -105,5 +105,9 @@ class AudioManager {
       print('Error setting music volume: $e');
     }
   }
-  
+  // Set sound effect volume (0.0 - 1.0)
+void setSfxVolume(double volume) {
+  _sfxVolume = volume.clamp(0.0, 1.0);
+}
+
 }

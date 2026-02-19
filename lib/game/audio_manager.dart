@@ -140,5 +140,9 @@ void disableMusic() {
 void enableSfx() {
   _isSfxEnabled = true;
 }
+// Disable soudn effects
+void disableSfx() {
+  _isSfxEnabled = false;
+}
 
 }

@@ -42,3 +42,16 @@ class Basket extends PositionComponent
       ..color = Colors.brown[800]!
       ..style = PaintingStyle.stroke
       ..strokeWidth = 3;
+
+     final handlePath = Path()
+      ..moveTo(10, 0)
+      ..quadraticBezierTo(
+        size.x / 2,
+        -20,
+        size.x - 10,
+        0,
+      );
+
+    canvas.drawPath(handlePath, handlePaint);
+  }
+}

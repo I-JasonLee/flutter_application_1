@@ -33,3 +33,13 @@ es.length)],
  removeFromParent();
  }
  }
+
+ @override
+ void onCollision(Set<Vector2> intersectionPoints, PositionC
+omponent other) {
+ super.onCollision(intersectionPoints, other);
+ if (other is Basket) {
+ gameRef.incrementScore();
+ removeFromParent();
+ }
+ }
